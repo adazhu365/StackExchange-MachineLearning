@@ -29,7 +29,7 @@ Next, regularization schemes were considered--both lasso and ridge regression.  
 
 Stepwise regression was performed to select the model with the optimal AIC on the training set: there were too many predictors to effectively do exhaustive search on even one train/test split, let alone 100.  The optimal set of predictors was used to fit a Poisson GLM. Performing model selection in the training set did not improve out-of-sample test set performance and the small changes in R^2 ver only 100 splits might have been due to chance. However, when AIC stepwise regression was applied to the full set of observations, the largest variance inflation factors (VIFs) decreased relative to those calculated from a full model of all predictors.  Fewer VIFs exceeded 5, and those that did so barely did.  Therefore, the AIC-selected model was used as the final model.
 
-![](images/vif comparison.png)
+![](images/vif%20comparison.png)
 
 Decrease in VIFs (light blue) relative to the remaining VIFs (darker blue) after stepwise AIC model selection.  Red columns are VIFs for terms in the full model that were dropped altogether by model selection.  Any increase if VIFs would be shown in grey stacked bars, but none are present.
 
