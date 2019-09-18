@@ -1,13 +1,18 @@
 # StackExchange-Analysis
 --Joel Hensel, Mark Tenzer, Devan Visvalingam, Ada Zhu
 
-The goal of this analysis is to answer key questions that would help various StackExchange users interact more positively with the platform. Users can be categorized into three roles: those who are seeking knowledge (the “Questioner”), those who are providing knowledge (the “Answerer”), and those governing the platform (the “Moderator”). 
+The goal of this analysis is to answer key questions that would help various StackExchange users interact more positively with the platform. 
+
+To begin with, users in this analysis can be categorized into three roles: 
+* Those who are seeking knowledge (the “Questioner”)
+* Those who are providing knowledge (the “Answerer”)
+* Those governing the platform (the “Moderator”)
 
 The analysis sought answers to the following questions:
-For the Questioner, “will my question get an answer at all?”
-For the Questioner, “how many answers will my question get?”
-For the Questioner, “will my question get an accepted answer?”
-For the Answerer, “how do I have my answer get the highest score?”
+* For the Questioner, “will my question get an answer at all?” 
+* For the Questioner, “how many answers will my question get?” 
+* For the Questioner, “will my question get an accepted answer?” 
+* For the Answerer, “how do I have my answer get the highest score?”
 
 *Each of these questions is founded on the notion that if the user knew of certain variables that predicted the outcomes, they could manipulate their posts in order to better achieve their outcomes.*
 
