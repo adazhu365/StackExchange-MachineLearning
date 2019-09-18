@@ -1,6 +1,5 @@
 #Joel Hensel, Mark Tenzer, Devan Visvalingam, Ada Zhu
 
-#setwd("C:/Users/Mark Tenzer/Desktop/STAT 6021")
 #setwd("/Users/apple/Desktop")
 library(car)
 library(bestglm)
@@ -448,7 +447,7 @@ hist(rawdata$User_Views)
 
 
 data <- data.frame(
-  score = log(rawdata$answer_score - min(rawdata$answer_score) + 1),
+  score = log(rawdata$answer_score - min(rawdata$answer_score) + 1), #ensure all scores are positive before taking the log
   length = log(rawdata$Answer_Length),
   duration = as.numeric(rawdata$answer_lastactivitydate - rawdata$post_creationdate) +1,
   questionView = log((rawdata$question_viewcount)),
@@ -457,7 +456,7 @@ data <- data.frame(
   HasAboutMe = as.factor(rawdata$AboutMe),
   Reputation = log(rawdata$User_Reputation),
   UserViews = log(rawdata$User_Views+1),
-  TagCount = lengths(gregexpr(">", rawdata$Question_Tags))
+  TagCount = lengths(gregexpr(">", rawdata$Question_Tags)) #checking regular expression
 )
 
 
@@ -473,9 +472,9 @@ testing4 <- subset(data, sample4==FALSE)
 
 #linear regression, predicting the score of each answer
 mod1 <- lm(score ~ ., data = training4)
-summary(mod1) #0.3133, p-value: < 2.2e-16
+summary(mod1) # p-value: < 2.2e-16
 
-#boxcox gives worse result
+#boxcox gives similar result
 # bc <- boxcox(mod1)
 # lambda <- bc$x[which.max(bc$y)]
 # training4$score <- training4$score ^ lambda 
